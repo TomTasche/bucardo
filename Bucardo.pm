@@ -3101,10 +3101,10 @@ sub start_kid {
 
                 ## Note: no need to turn these back to what they were: we always want to stay in replica mode
                 ## If doing old school pg_class hackery, we defer until much later
-                if ($x->{disable_trigrules} eq 'replica') {
-                    $xdbh->do(q{SET session_replication_role = 'replica'});
-                    $xdbh->commit();
-                }
+                #if ($x->{disable_trigrules} eq 'replica') {
+                #    $xdbh->do(q{SET session_replication_role = 'replica'});
+                #    $xdbh->commit();
+                #}
 
             } ## end postgres
 
